@@ -8,6 +8,7 @@ function changeCount(num){
 
 // carousel
 let index = 0;
+
 function showImage(i){
     index += i;
 
@@ -17,9 +18,7 @@ function showImage(i){
 
     for(j=0;j < images.length;j++){
         images[j].style.display="none";
-    }
-
-    for (j=0 ; j<dots.length;j++) {
+        images[j].classList.remove("fade");
         dots[j].className = dots[j].className.replace(" active", "");
     }
 
@@ -32,5 +31,11 @@ function showImage(i){
     }
 
     images[index].style.display = "block";
+    images[index].classList.add("fade");
     dots[index].className += " active";
 }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        showImage(0);
+    });
+    window.addEventListener("onload", showImage(index));

@@ -45,6 +45,7 @@
 .image {
     display: none;
 }
+
 .carousel-container {
     width: 70%;
     height: 100vh;
@@ -110,7 +111,7 @@
 }
 
 .fade {
-    animation: fade 1.5s;
+    animation: fade 1.5s forwards;
 }
 
 @keyframes fade{
