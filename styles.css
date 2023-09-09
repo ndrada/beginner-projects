@@ -254,3 +254,83 @@
         width: 18%;
     } 
 }
+
+/* grocery list */
+
+.grocery-list-project {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: cornflowerblue;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.list-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.groceries {
+    width: 600px;
+    min-height: 90vh;
+    margin: 20px auto;
+    padding: 20px 10px;
+    background-color: white;
+    box-shadow: 10px 10px 23px 0 rgba(25, 69, 151, 0.577);
+    border-radius: 5px;
+}
+
+#listUserInput {
+    margin: 5px;
+    padding: 0 5px;
+}
+
+.groceries h1 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: #010103e7;
+}
+
+.groceries i{
+    font-size: 1.5rem;
+    color: cornflowerblue;
+}
+
+.groceries input {
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid #010103e7;
+    border-radius: 1px;
+    font-size: 1.5rem
+}
+
+#allItems h2{
+    margin-left: 50px;
+    margin-right: 10px;
+    margin-top: 15px;
+    font-size: 2rem;
+}
+
+@media(max-width: 480px){
+    .groceries {
+        width: 90vw;
+    }
+    .groceries h1{
+        font-size: 10vw;
+    }
+    .groceries i{
+        font-size: 5vw;
+    }
+    .groceries input{
+        font-size: 5vw;
+    }
+    #allItems h2 {
+        font-size: 5vw;
+        margin-left: 25px;
+    }
+}

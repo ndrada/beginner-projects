@@ -83,3 +83,32 @@ function erase(){
     expression = '';
     userInput.value = expression;
 }
+
+// grocery list
+const groceries = document.getElementsByClassName('groceries')[0];
+const pencil = document.getElementById('pencil');
+const allItems = document.getElementById('allItems');
+const listUserInput = document.getElementById('listUserInput');
+
+pencil.addEventListener('click', function(){
+    allItems.innerHTML = '';
+})
+
+listUserInput.addEventListener('keydown', function(event){
+    if(event.key == 'Enter'){
+        addItem();
+    }
+})
+
+function addItem(){
+    let h2 = document.createElement('h2');
+    h2.innerHTML = '- ' + listUserInput.value;
+
+    h2.addEventListener('click', function(){
+        h2.style.textDecoration = 'line-through';
+    })
+
+    allItems.insertAdjacentElement('beforeend', h2);
+
+    listUserInput.value = '';
+}
